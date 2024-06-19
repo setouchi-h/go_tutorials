@@ -16,7 +16,7 @@ func main() {
 	// fmt.Println("Total execution time:", time.Since(t0))
 
 	t1 := time.Now()
-	for i:=0; i<1000; i++ {
+	for i := 0; i < 1000; i++ {
 		wg.Add(1)
 		go count()
 	}
@@ -26,7 +26,7 @@ func main() {
 
 func count() {
 	var res int
-	for i:=0; i<100000000; i++ {
+	for i := 0; i < 100000000; i++ {
 		res += i
 	}
 	wg.Done()
